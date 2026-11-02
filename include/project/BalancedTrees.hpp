@@ -59,8 +59,8 @@ private:
     const Node* findNode(const Node* n, const Key& key) const;
     static Node* minimum(Node* n);
     static void inorder(const Node* n, std::vector<Key>& out);
-    static bool validate(const Node* n, const Key* lo, const Key* hi,
-                         int& computedHeight);
+    bool validate(const Node* n, const Key* lo, const Key* hi,
+                  int& computedHeight) const;
 };
 
 template <typename Key, typename Value, typename Compare = std::less<Key>>
